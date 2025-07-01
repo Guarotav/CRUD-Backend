@@ -1,7 +1,17 @@
 const db = require("./db");
-const Duck = require("./duck");
+const Campus = require("./campuses");
+const Student = require("./students");
+
+
+Campus.hasMany(Student,{
+  foreignKey: `Campus.id`,
+});
+Student.belongsTo(Campus,{
+  foreignKey:  `Campus.id`,
+});
 
 module.exports = {
   db,
-  Duck,
+  Campus,
+  Student,
 };
