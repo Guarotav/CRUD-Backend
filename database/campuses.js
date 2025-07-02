@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const db = require("./db");
 
-// You porbably don't need a Duck model, this is just for demonstration purposes
+//Campus Model Defining
 const Campuses = db.define("Campus", {
   id: {
     type: DataTypes.INTEGER,

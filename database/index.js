@@ -4,10 +4,10 @@ const Student = require("./students");
 
 
 Campus.hasMany(Student,{
-  foreignKey: `Campus.id`,
+  foreignKey: `CampusID`,
 });
 Student.belongsTo(Campus,{
-  foreignKey:  `Campus.id`,
+  foreignKey:  `CampusID`,
 });
 
 module.exports = {

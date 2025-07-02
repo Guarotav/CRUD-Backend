@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const ducksRouter = require("./ducks");
+const campusRouter = require("./campuses");
+const studentRouter = require
 
 router.use("/ducks", ducksRouter);
 
