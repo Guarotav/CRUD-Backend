@@ -2,11 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { Campus, Student } = require("../database");
 
-<<<<<<< HEAD
-// GET all ducks
-router.get("/", async (req, res) => {
-  
-=======
 // Fetching all campuses
 router.get("/", async (req, res) => {
     try {
@@ -48,7 +43,7 @@ router.delete("/:id", async (req, res) => {
         if (!campus){
             return res.sendStatus(404);
         }
-        await campus.destroy;
+        await campus.destroy();
         res.sendStatus(200);
     }
     catch(err){
@@ -66,7 +61,6 @@ router.post("/", async (req, res) => {
         res.status(400).send("Fail to create this campus")
     }
 
->>>>>>> 55b2babc3e498ef276c1deb897fb0eb271c239c4
 });
 
 module.exports = router;

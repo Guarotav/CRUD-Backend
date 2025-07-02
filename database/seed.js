@@ -31,31 +31,33 @@ const seed = async () => {
 
     const students = await Student.bulkCreate([
       {
+        id: 1,
         name: "Jessica Rivera",
         email: "jessica.rivera@baruch.edu",
         gpa: 3.8,
-        CampusId: campuses[0].id,
       },
       {
+        id: 2,
         name: "Michael Chen",
         email: "mchen@hunter.cuny.edu",
         gpa: 3.5,
         image: "https://randomuser.me/api/portraits/men/32.jpg",
-        CampusId: campuses[1].id,
       },
       {
+        id: 3,
         name: "Aaliyah Johnson",
         email: "aaliyah.j@nyu.edu",
         gpa: 3.9,
-        CampusId: campuses[2].id,
       },
       {
+        id: 4,
         name: "Daniel Park",
         email: "daniel.park@hunter.cuny.edu",
         gpa: 3.2,
-        CampusId: campuses[1].id,
       },
     ]);
+
+    await students[0].setCampus(campuses[1]);
 
     console.log(`🏫 Created ${campuses.length} campuses`);
     console.log(`🎓 Created ${students.length} students`);
