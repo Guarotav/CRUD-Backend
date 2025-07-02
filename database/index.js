@@ -8,7 +8,6 @@ Campus.hasMany(Student,{
 });
 Student.belongsTo(Campus,{
   foreignKey:  `CampusID`,
-});
 
 module.exports = {
   db,
