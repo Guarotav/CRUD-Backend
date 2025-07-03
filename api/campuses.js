@@ -43,7 +43,7 @@ router.delete("/:id", async (req, res) => {
         if (!campus){
             return res.sendStatus(404);
         }
-        await campus.destroy;
+        await campus.destroy();
         res.sendStatus(200);
     }
     catch(err){
