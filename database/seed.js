@@ -7,6 +7,7 @@ const seed = async () => {
 
     const campuses = await Campus.bulkCreate([
       {
+        id : 1,
         name: "Baruch College",
         address: "55 Lexington Ave, New York, NY 10010",
         description:
@@ -14,6 +15,7 @@ const seed = async () => {
         url: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Baruch_College_Newman_Library.jpg",
       },
       {
+        id: 2, 
         name: "Hunter College",
         address: "695 Park Ave, New York, NY 10065",
         description:
@@ -21,6 +23,7 @@ const seed = async () => {
         url: "https://upload.wikimedia.org/wikipedia/commons/5/55/Hunter_College%2C_New_York.jpg",
       },
       {
+        id: 3,
         name: "New York University (NYU)",
         address: "70 Washington Square S, New York, NY 10012",
         description:
