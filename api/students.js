@@ -22,6 +22,7 @@ router.get("/:id", async (req, res) => {
         if (!student){
             return res.sendStatus(404);
         }
+         res.json(student);
     }
     catch(err){
         res.status(400).send("Fail to fetch this student");
