@@ -28,14 +28,19 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-
-/*router.patch("/", async (req, res) => {
-    try{
+// Updating a campus
+router.patch("/:id", async (req, res) => {
+  try {
+    const campus = await Campus.findByPk(req.params.id);
+    if (!campus) {
+      return res.status(404);
     }
-    catch(err){
-        
-    }
-});*/
+    const updatedCampus = await campus.update(req.body);
+    res.send(updatedCampus);
+  } catch (error) {
+    res.status(400).send("Failed to update campus.");
+  }
+});
 
 //Deleting a specific campus
 router.delete("/:id", async (req, res) => {
