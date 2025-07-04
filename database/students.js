@@ -9,7 +9,12 @@ const Students = db.define("Student", {
     primaryKey: true,
   },
 
-  name: {
+  firstName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+
+  lastName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -32,7 +37,7 @@ const Students = db.define("Student", {
   },
    
   gpa: {
-    type: DataTypes.DECIMAL(2, 1),
+    type: DataTypes.NUMBER,
     allowNull: false,
     validate:{
         min:0,
