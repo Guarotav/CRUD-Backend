@@ -4,7 +4,7 @@ const pg = require("pg");
 
 
 // Feel free to rename the database to whatever you want!
-const dbName = "crud";
+const dbName = "ttp_crud";
 
 const db = new Sequelize(
   process.env.DATABASE_URL || `postgres://localhost:5432/${dbName}`,
@@ -14,6 +14,3 @@ const db = new Sequelize(
 );
 
 module.exports = db;
-
-// To start ther server, run:
-// pg_ctl.exe start -D "C:\Program Files\PostgreSQL\17\data"
